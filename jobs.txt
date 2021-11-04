@@ -1,3 +1,3 @@
 create basic website architect (index.html, login page, etc)
-write php code to parse the copied course schedule from the nest (follow the insturction in the req report and reference the erd pdf to extract the individual attributes from the copied text)
+write php code to parse the copied course schedule from the nest (follow the instructions in the req report and reference the erd pdf to extract the individual attributes from the copied text)
 get a copy of the Barbelin floor plan and convert into a format integrateable with html (get pdf on made by university and overlay divs, or build from scratch)
