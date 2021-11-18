@@ -1,10 +1,5 @@
-<html>
-<img src="examplegraph.png" alt="Graph" width="500">
-<br>
-</html>
 <?php
 include_once "Vertex.php";
-
 /*
 $adjacencyMat = [
     [0,6,0,1,0],
@@ -49,8 +44,10 @@ $g->addNode($C);
 $g->addNode($D);
 $g->addNode($E);
 
+$nodes = array("A"=>$A, "B"=>$B, "C"=>$C, "D"=>$D, "E"=>$E);
 //echo $g;
 //-----------------------------
+/*
 $start = $A;
 $end = $C;
 $g->runDijkstra($start);
@@ -65,4 +62,67 @@ echo 'distance = ' . $end->distanceFromStart;
 echo '<pre>'; print_r($pathNames); echo '</pre>';
 
 echo $g;
+*/
 ?>
+
+<html>
+<h2>Basic Dijkstra Pathfinding Example</h2>
+<img src="examplegraph.png" alt="Graph" width="500">
+<br> <br>
+<form method="post">
+    <label>Start: </label>
+    <input type="text" name="start"/>
+    <br>
+    <label>Dest: </label>
+    <input type="text" name="end"/>
+    <br>
+	<input type="submit" name="go" value="Go!"/>
+</form>
+<br>
+<?php
+//error handling
+set_error_handler('exceptions_error_handler');
+
+function exceptions_error_handler($severity, $message, $filename, $lineno) {
+  if (error_reporting() == 0) {
+    return;
+  }
+  if (error_reporting() & $severity) {
+    throw new ErrorException($message, 0, $severity, $filename, $lineno);
+  }
+}
+
+if (isset($_POST['go'])) {
+    if (!empty($_POST['start']) && !empty($_POST['end'])) {
+
+        //declare start and end nodes
+        try{
+            $start = $nodes[$_POST['start']];
+            $end = $nodes[$_POST['end']];
+        } catch (Exception $e) {
+            echo 'Caught exception: ',  $e->getMessage(), "\n";
+            exit();
+        }
+
+        //populate vertex info from start node
+        $g->runDijkstra($start);
+
+        //find path from start to end
+        $path = $g->getPath($start, $end);
+
+        //parse found path
+        foreach ($path as $x) {
+            $pathNames[] = $x->name;
+        }
+
+        //print path
+        echo 'Path from ' . $start->name . " to " . $end->name . "<br>";
+        echo 'distance = ' . $end->distanceFromStart;
+        echo '<pre>'; print_r($pathNames); echo '</pre>';
+        //echo $g;
+    } else {
+        echo "Missing Location";
+    }
+}
+?>
+</html>
