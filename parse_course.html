@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+$parse = "Beginning Spanish I | Spanish 101 Section D03 | Class Begin: 08/27/2018 | Class End: 12/18/2018
+Registered
+08/27/2018 -- 12/18/2018   Friday
+S
+M
+T
+W
+T
+F
+S
+   11:15 AM - 12:05 PM Type: Class Location: Main Building: Bellarmine Hall Room: 315
+08/27/2018 -- 12/18/2018   Monday,Wednesday,Friday
+S
+M
+T
+W
+T
+F
+S
+   12:20 PM - 01:10 PM Type: Class Location: Main Building: Post Hall Room: 322
+Instructor: Contreras, Jose (Primary)
+CRN: 41247" ;
+
+
+
+$b = explode("| ",$parse);
+$c = explode("Type: ",$parse);
+$d = explode("Friday",$c[0]);
+$e = explode("Room:",$parse);
+$f = explode("Building: ",$e[0]);
+$g = explode("08/27/2018 -- 12/18/2018",$e[1]);
+$h = explode("S",$g[1]);
+$i = explode("S",$parse);
+$j = explode("Type: ",$i[7]);
+$k = explode("S",$d[1]);
+$l = explode("Room:",$i[7]);
+$m = explode("Building: ",$l[0]);
+$n = explode("Instructor: ",$i[7]);
+$o = explode("(Primary)",$n[1]);
+$p = explode("Room: ",$n[0]);
+$q = explode("08/27/2018 -- 12/18/2018",$parse);
+$r = explode("S",$q[1]);
+$s = explode("CRN:",$parse);
+echo $b[0]."<br>";
+echo $b[1]."<br>";
+echo $r[0]."<br>";
+echo $k[2]."<br>";
+echo $f[1]."<br>";
+echo $g[0]."<br>";
+echo $h[0]."<br>";
+echo $j[0]."<br>";
+echo $m[1]."<br>";
+echo $p[1]."<br>";
+echo $o[0]."<br>";
+echo $s[1]."<br>";
+
+
+?>
+ 
+</body>
+</html>
