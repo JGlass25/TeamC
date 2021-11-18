@@ -5,28 +5,95 @@
     function newMap225(){
       document.getElementById("barbBlank").src="https://github.com/JGlass25/TeamC/blob/main/barbHall225.jpeg?raw=true";
     }
+    function newMap226(){
+      document.getElementById("barbBlank").src ="https://github.com/JGlass25/TeamC/blob/main/barbHall226.jpg?raw=true";
+    }
+    function newMap221(){
+      document.getElementById("barbBlank").src ="https://github.com/JGlass25/TeamC/blob/main/barbHall221.jpeg?raw=true";
+    }
+    function newMapCSDept(){
+      document.getElementById("barbBlank").src ="https://github.com/JGlass25/TeamC/blob/main/barbHallCSDept.jpeg?raw=true";
+    }
+    function newMapMathDept(){
+      document.getElementById("barbBlank").src ="https://github.com/JGlass25/TeamC/blob/main/barbHallMathDept.jpeg?raw=true";
+    }
+    function newMapPSDept(){
+            document.getElementById("barbBlank").src ="https://github.com/JGlass25/TeamC/blob/main/barbHallPSDept.jpeg?raw=true";
+    }
+    function newMapPHLDept(){
+            document.getElementById("barbBlank").src ="https://github.com/JGlass25/TeamC/blob/main/barbHallPHLDept.jpeg?raw=true";
+    }
+    function newMap264(){
+       document.getElementById("barbBlank").src = "https://github.com/JGlass25/TeamC/blob/main/barbHall264.jpg?raw=true";
+    }
+    function newMap265(){
+       document.getElementById("barbBlank").src = "https://github.com/JGlass25/TeamC/blob/main/barbHall265.jpeg?raw=true";
+    }
+    function newMap303(){
+       document.getElementById("barbBlank").src = "https://github.com/JGlass25/TeamC/blob/main/barbHall303.jpeg?raw=true";
+    }
+    function newMap306(){
+       document.getElementById("barbBlank").src = "https://github.com/JGlass25/TeamC/blob/main/barbHall306.jpeg?raw=true";
+    }
+
   </script>
   <meta charset="UTF-8">
   <title>Barbelin Hall 2nd & 3rd Floor </title>
   <h1 style = text-align:center> BARBELIN HALL 2ND & 3RD FLOOR </h1>
   <p style="text-align:center;">
   <img id = barbBlank
-       src="https://github.com/JGlass25/TeamC/blob/main/IMG_7574Medium.jpeg?raw=true"
+       src="https://github.com/JGlass25/TeamC/blob/main/blankBarb.jpeg?raw=true"
        alt="Barb Hall 2nd / 3rd Floor"
        class = "center"
        usemap="#barb2/3"
   >
-
 <map name="barb2/3">
-  <area shape="poly" coords="27,185, 150,185, 150,324, 104,324, 104,243, 27,243" alt="Math Department" href="index.html">
-  <area shape="rect" coords = "176,180, 218,215" alt = "Room 226" href = "index.html";>
+  <area shape="poly" coords="27,185, 150,185, 150,324, 104,324, 104,243, 27,243" alt="Math Department" onclick=newMapMathDept();>
+  <area shape="rect" coords= "151, 32, 205, 74" alt = "Room 221" onclick = newMap221();>
   <area shape="rect" coords = "176, 125, 218, 170" alt = "Room 225" onclick = newMap225();>
+  <area shape="rect" coords = "176, 180, 218, 215" alt = "Room 226" onclick = newMap226();>
+  <area shape="rect" coords = "206, 37, 283, 97" alt = "CSC Dept." onclick = newMapCSDept();>
+  <area shape="rect" coords = "216, 63, 280, 93" alt = "CSC Dept." onclick = newMapCSDept();>
+  <area shape="rect" coords = "284, 37, 329, 59" alt = "Poli Sci Dept." onclick = newMapPSDept();>
+  <area shape="rect" coords = "285, 63, 346, 95" alt = "Poli Sci Dept." onclick = newMapPSDept();>
+  <area shape="rect" coords = "212, 237, 330, 298" alt = "Philosophy Dept." onclick = newMapPHLDept();>
+  <area shape="rect" coords = "347, 237, 405, 321" alt = "Philosophy Dept." onclick = newMapPHLDept();>
+  <area shape="rect" coords = "480, 156, 582, 208" alt = "Philosophy Dept." onclick = newMapPHLDept();>
+
+  <area shape="rect" coords = "400, 146, 441, 207" alt = "Room 264.." onclick = newMap264();>
+  <area shape="rect" coords = "437, 48, 480, 206" alt = "Room 265.." onclick = newMap265();>
+  <area shape="rect" coords = "461, 10, 498, 69" alt = "Room 303.." onclick = newMap303();>
+  <area shape="rect" coords = "500, 20, 535, 70" alt = "Room 306.." onclick = newMap306();>
+
 </map>
   </p>
 </head>
 <body >
 <br>
-<button onclick="window.print()">Print this page</button>
+<h1 style = text-align:center> Rooms and Departments of Barbelin Hall 2nd & Third Floor </h1>
+<h2 style = text-align:center> Click room number or names to find their location on the map</h2>
+<dl style = "text-align:left;border: 1px solid">
+  <dt onclick = newMap221();>Room 221</dt>
+  <dt onclick = newMap225();>Room 225</dt>
+  <dt onclick = newMap226();>Room 226</dt>
+  <dt onclick = newMapCSDept();>Computer Science Department</dt>
+  <dd onclick = newMapCSDept();>Wei Chang, Ph.D. Room 216</dd>
+  <dd onclick = newMapCSDept();>George Grevera, Ph.D. Room 213</dd>
+  <dd onclick = newMapCSDept();>Bakak Forouraghi, Ph.D. Room 218</dd>
+  <dt onclick = newMapMathDept();>Room 225</dt>
+  <dd onclick = newMapMathDept();> Patricia Bobo, M.S., A.S.A Room 230</dd>
+  <dd onclick = newMapMathDept();> Rachel Hall, Ph.D. Room 238</dd>
+  <dt onclick = newMapPHLDept();> Philosophy Department</dt>
+  <dd onclick = newMapPHLDept(); > Nathaniel Bulthuis, Ph. D Room 254 </dd>
+  <dd onclick = newMapPHLDept(); > James Boettcher, Ph. D Room 250 </dd>
+  <dt onclick = newMap264();> Room 264 </dt>
+  <dt onclick = newMap265();> Room 265 </dt>
+  <dt onclick = newMap303();> Room 303 </dt>
+  <dt onclick = newMap306();> Room 306 </dt>
+
+</dl>
+  <button onclick="window.print()">Print this page</button>
+</div>
 
 </body>
 </html>
