@@ -2,6 +2,7 @@
 include_once "Vertex.php";
 
 //create vertexes
+//rooms
 $R221 = new Vertex('R221');
 $R225 = new Vertex('R225');
 $R226 = new Vertex('R226');
@@ -9,37 +10,43 @@ $R264 = new Vertex('R264');
 $R265 = new Vertex('R265');
 $R303 = new Vertex('R303');
 $R306 = new Vertex('R306');
+//staircases
+//central stair case from floor 2 to 3 ("Stair Central")
 $SC2 = new Vertex('SC2');
 $SC3 = new Vertex('SC3');
+
+//stairs outside room 264 leading up to 265 ("Stair Room")
 $SR2 = new Vertex('SR2');
 $SR25 = new Vertex('SR25');
+
+//western stairs that go from 1 to 2 to 2.5 (R265) to 3 (exclude 1 for our map) ("Stair West")
 $SW2 = new Vertex('SW2');
 $SW25 = new Vertex('SW25');
 $SW3 = new Vertex('SW3');
 
 $R221->addEdge($R225, 4);
 
-$R225->addEdge($R221, 4);
+$R225->addEdge($R221, 4); //*
 $R225->addEdge($R226, 1);
 
-$R226->addEdge($R225, 1);
+$R226->addEdge($R225, 1); //*
 $R226->addEdge($SC2, 10);
 
-$SC2->addEdge($R226, 10);
+$SC2->addEdge($R226, 10); //*
 $SC2->addEdge($R264, 2);
 $SC2->addEdge($SC3, 8);
 
-$R264->addEdge($SC2, 2);
+$R264->addEdge($SC2, 2); //*
 $R264->addEdge($SR2, 1);
 
-$SR2->addEdge($R264, 1);
+$SR2->addEdge($R264, 1); //*
 $SR2->addEdge($SW2, 10);
 $SR2->addEdge($SR25, 6);
 
-$SR25->addEdge($SR2, 6);
+$SR25->addEdge($SR2, 6); 
 $SR25->addEdge($R265, 1);
 
-$R265->addEdge($SR25, 1);
+$R265->addEdge($SR25, 1); //*
 $R265->addEdge($SW25, 1);
 
 $SW2->addEdge($SR2, 10);
@@ -52,13 +59,13 @@ $SW25->addEdge($SW3, 8);
 $SW3->addEdge($SW25, 8);
 $SW3->addEdge($R306, 5);
 
-$R306->addEdge($SW3, 5);
+$R306->addEdge($SW3, 5); //*
 $R306->addEdge($R303, 3);
 
-$R303->addEdge($R306, 3);
+$R303->addEdge($R306, 3); //*
 $R303->addEdge($SC3, 4);
 
-$SC3->addEdge($R303, 4);
+$SC3->addEdge($R303, 4); //*
 $SC3->addEdge($SC2, 8);
 
 //create graph
