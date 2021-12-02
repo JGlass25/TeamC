@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php
 
-$parse = "Computer Science I | Computer Science 120 Section D03 | Class Begin: 08/27/2018 | Class End: 12/18/2018
+$parse = "Beginning Spanish I | Spanish 101 Section D03 | Class Begin: 08/27/2018 | Class End: 12/18/2018
 Registered
-08/27/2018 -- 12/18/2018   Tuesday,Thursday
+08/27/2018 -- 12/18/2018   Friday
 S
 M
 T
@@ -14,8 +10,8 @@ W
 T
 F
 S
-   09:30 AM - 10:45 AM Type: Class Location: Main Building: Barbelin/Lonergan Hall Room: 225
-08/27/2018 -- 12/18/2018   Monday
+   11:15 AM - 12:05 PM Type: Class Location: Main Building: Bellarmine Hall Room: 315
+08/27/2018 -- 12/18/2018   Monday,Wednesday,Friday
 S
 M
 T
@@ -23,9 +19,9 @@ W
 T
 F
 S
-   11:15 AM - 12:05 PM Type: Class Location: Main Building: Barbelin/Lonergan Hall Room: 225
-Instructor: Krueger, Mary (Primary)
-CRN: 40317" ;
+   12:20 PM - 01:10 PM Type: Class Location: Main Building: Post Hall Room: 322
+Instructor: Contreras, Jose (Primary)
+CRN: 41247" ;
 
 
 $a = explode("\n",$parse);
@@ -44,23 +40,30 @@ $l = explode("Instructor: ",$parse);
 $ll = explode("(Primary)",$l[1]);
 $m = explode("CRN: ",$parse);
 
-echo $b[0]."<br>";
-echo $b[1]."<br>";
-echo $d[1]."<br>";
-echo $ff[0]."<br>";
-echo $e[0]."<br>";
-echo $g[1]."<br>";
-echo $ll[0]."<br>";
-echo $m[1]."<br>";
-echo $h[1]."<br>";
-echo $jj[0]."<br>";
-echo $i[0]."<br>";
-echo $k[1]."<br>";
+$coursename = $b[0];
+$courseinfo = $b[1];
+$day1 = $d[1];
+$room1 = $ff[0];
+$time1 = $e[0];
+$location1 = $g[1];
+$prof = $ll[0];
+$crn = $m[1];
+$day2 = $h[0];
+$room2 = $jj[0];
+$time2 = $i[0];
+$location2 = $k[1];
 
-
-
-
+echo $coursename;
+echo $coursename;
+echo $courseinfo;
+echo $day1;
+echo $room1;
+echo $time1;
+echo $location1;
+echo $prof;
+echo $crn;
+echo $day2;
+echo $room2;
+echo $time2;
+echo $location2;
 ?>
- 
-</body>
-</html>
