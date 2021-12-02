@@ -40,6 +40,7 @@ $l = explode("Instructor: ",$parse);
 $ll = explode("(Primary)",$l[1]);
 $m = explode("CRN: ",$parse);
 
+
 $coursename = $b[0];
 $courseinfo = $b[1];
 $day1 = $d[1];
