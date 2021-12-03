@@ -1,27 +1,5 @@
 <?php
-
-$parse = "Beginning Spanish I | Spanish 101 Section D03 | Class Begin: 08/27/2018 | Class End: 12/18/2018
-Registered
-08/27/2018 -- 12/18/2018   Friday
-S
-M
-T
-W
-T
-F
-S
-   11:15 AM - 12:05 PM Type: Class Location: Main Building: Bellarmine Hall Room: 315
-08/27/2018 -- 12/18/2018   Monday,Wednesday,Friday
-S
-M
-T
-W
-T
-F
-S
-   12:20 PM - 01:10 PM Type: Class Location: Main Building: Post Hall Room: 322
-Instructor: Contreras, Jose (Primary)
-CRN: 41247" ;
+$parse = ;
 
 
 $a = explode("\n",$parse);
@@ -39,7 +17,6 @@ $k = explode("Building: ",$j[0]);
 $l = explode("Instructor: ",$parse);
 $ll = explode("(Primary)",$l[1]);
 $m = explode("CRN: ",$parse);
-
 
 $coursename = $b[0];
 $courseinfo = $b[1];
