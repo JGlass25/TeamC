@@ -1,24 +1,51 @@
 <?php
-class Vertex {
-    public $name;
-    public $adjacencyList = array();
-    public $distanceFromStart;
-    public $previousVertex;
+/**
+ * @file Vertex.php
+ * @author John Glasser
+ * @date 20 Nov 2021
+ * @brief File Implementing Dijkstra's Algorithm
+ *
+ * Vertex Class used in conjunction with Graph class to implement Dijkstra's alogithm
+ */
 
+
+class Vertex {
+    public $name;                       ///< name of Vertex
+    public $adjacencyList = array();    ///< list of edges
+    public $distanceFromStart;          ///< integer distance from start used by runDijkstra
+    public $previousVertex;             ///< previous vertex in shortest path
+
+    //! Constructor.
+    /*!
+      Takes a name of vertex and sets distance to start to max
+    */
     public function __construct($name) {
         $this->name = $name;
         $this->distanceFromStart = PHP_INT_MAX;
         $previousVertex = null;
     }
 
+    /*!
+      Function to add and edge
+      \param v the vertex being connected to.
+      \param weight the distance to vector.
+    */
     public function addEdge($v, $weight) {
         $this->adjacencyList[$v->name] = $weight;
     }
 
+    /*!
+      Getter for name
+      /return name
+    */
     public function getName() {
         return $this->name;
     }
 
+    /*!
+      Overrides toString
+      Prints name of vertex, distance to start, previous vertex in shortest path, and all edges
+    */
     public function __toString() {
         $s = $this->name . ': ' . $this->distanceFromStart;
         if ($this->previousVertex != null) {
@@ -36,18 +63,30 @@ class Vertex {
 }
 
 class Graph {
-    public $list = array();
-    public $size;
+    public $list = array();     ///< list of vertexes in graph
+    public $size;               ///< integer number of vertexes in graph
 
+    //! Constructor.
+    /*!
+      Creates empyt graph of size 0
+    */
     public function __construct() {
         $this->size = 0;
     }
 
+    /*!
+      Function to add node to graph
+      \param v the vertex being added.
+    */
     public function addNode($v) {
         $this->list[$v->name] = $v;
         $this->size++;
     }
 
+    /*!
+      Overrides toString
+      Prints each vertex in graph
+    */
     public function __toString() {
         $s = '';
         foreach($this->list as $x) {
@@ -57,6 +96,13 @@ class Graph {
         return $s;
     }
 
+    /*!
+      Function to get path from v to w after Dijkstra has been run for graph using previous vertex
+      Typically used after runDijkstra() has been run for v
+      \param v the start vertex.
+      \param w the ending vertex.
+      \return array of path from v to w
+    */
     public function getPath($v, $w) {
         $path = array();
         $path[] = $w;
@@ -68,6 +114,10 @@ class Graph {
         return array_reverse($path);
     }
 
+    /*!
+      Function to fill out information for each vertex in graph finding shortest path, and previous vertex
+      \param s the vertex at start of graph.
+    */
     public function runDijkstra($s){
         $visited = array();
         $unvisited = $this->list;

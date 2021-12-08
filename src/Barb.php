@@ -1,4 +1,13 @@
 <?php
+/**
+ * @file Barb.php
+ * @author John Glasser
+ * @date 8 Dec 2021
+ * @brief File Creating graph of Barbeline
+ *
+ * Creates of Barbeline hall to use with Dijkstra to implement path finding functionality
+ */
+
 include_once "Vertex.php";
 
 //create vertexes
@@ -43,7 +52,7 @@ $SR2->addEdge($R264, 1); //*
 $SR2->addEdge($SW2, 10);
 $SR2->addEdge($SR25, 6);
 
-$SR25->addEdge($SR2, 6); 
+$SR25->addEdge($SR2, 6);
 $SR25->addEdge($R265, 1);
 
 $R265->addEdge($SR25, 1); //*

@@ -1,4 +1,13 @@
 <?php
+/**
+ * @file Barb.php
+ * @author John Glasser
+ * @date 20 Nov 2021
+ * @brief File Creating demo of Dijkstra's Alogorithm
+ *
+ * Implements simple test graph to demo disjkstra for shortest path finding
+ */
+
 include_once "Vertex.php";
 /*
 $adjacencyMat = [
