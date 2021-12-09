@@ -30,6 +30,9 @@ $day2 = $h[0];
 $room2 = $jj[0];
 $time2 = $i[0];
 $location2 = $k[1];
+if ($room2==NULL){
+	$day2=NULL;
+    }
 
 echo $coursename;
 echo $coursename;
