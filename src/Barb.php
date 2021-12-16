@@ -28,10 +28,30 @@ $SC3 = new Vertex('SC3');
 $SR2 = new Vertex('SR2');
 $SR25 = new Vertex('SR25');
 
+
+//stairs outside math department
+$SNE2 = new Vertex('SNE2');
+$SNE1 = new Vertex('SNE1');
+
+//stairs between philosophy dept
+$SNW2 = new Vertex('SNW2');
+$SNW1 = new Vertex('SNW1');
+
 //western stairs that go from 1 to 2 to 2.5 (R265) to 3 (exclude 1 for our map) ("Stair West")
+$SW1 = new Vertex('SW1');
 $SW2 = new Vertex('SW2');
 $SW25 = new Vertex('SW25');
 $SW3 = new Vertex('SW3');
+
+//doors
+//east arcade
+$DEA = new Vertex('DEA');
+//west arcade
+$DWA = new Vertex('DWA');
+//central by bathrooms
+$DC = new Vertex('DC');
+//at base of west stairs
+$DW = new Vertex('DW');
 
 $R221->addEdge($R225, 4);
 
@@ -39,9 +59,17 @@ $R225->addEdge($R221, 4); //*
 $R225->addEdge($R226, 1);
 
 $R226->addEdge($R225, 1); //*
-$R226->addEdge($SC2, 10);
+$R226->addEdge($SNE2, 5);
 
-$SC2->addEdge($R226, 10); //*
+$SNE2->addEdge($R226, 5);
+$SNE2->addEdge($SNE1, 8);
+$SNE2->addEdge($SNW2, 5);
+
+$SNW2->addEdge($SNE2, 5);
+$SNW2->addEdge($SNW1, 8);
+$SNW2->addEdge($SC2, 4);
+
+$SC2->addEdge($SNW2, 4); //*
 $SC2->addEdge($R264, 2);
 $SC2->addEdge($SC3, 8);
 
@@ -59,6 +87,7 @@ $R265->addEdge($SR25, 1); //*
 $R265->addEdge($SW25, 1);
 
 $SW2->addEdge($SR2, 10);
+$SW2->addEdge($SW1, 8);
 $SW2->addEdge($SW25, 8);
 
 $SW25->addEdge($SW2, 8);
@@ -77,12 +106,40 @@ $R303->addEdge($SC3, 4);
 $SC3->addEdge($R303, 4); //*
 $SC3->addEdge($SC2, 8);
 
+$SNE1->addEdge($SNE2, 8);
+$SNE1->addEdge($DEA, 7);
+
+$DEA->addEdge($SNE1, 7);
+$DEA->addEdge($DWA, 2);
+
+$SNW1->addEdge($SNW2, 8);
+$SNW1->addEdge($DC, 4);
+$SNW1->addEdge($DWA, 4);
+
+$DWA->addEdge($SNW1, 4);
+$DWA->addEdge($DEA, 2);
+
+$DC->addEdge($SNW1, 4);
+$DC->addEdge($DW, 10);
+
+$DW->addEdge($DC, 10);
+$DW->addEdge($SW1, 1);
+
+$SW1->addEdge($DW, 1);
+$SW1->addEdge($SW2, 8);
+
+
+
 //create graph
 $g = new graph();
 
 $g->addNode($R221);
 $g->addNode($R225);
 $g->addNode($R226);
+$g->addNode($SNE2);
+$g->addNode($SNE1);
+$g->addNode($SNW2);
+$g->addNode($SNW1);
 $g->addNode($R264);
 $g->addNode($R265);
 $g->addNode($R303);
@@ -91,12 +148,19 @@ $g->addNode($SC2);
 $g->addNode($SC3);
 $g->addNode($SR2);
 $g->addNode($SR25);
+$g->addNode($SW1);
 $g->addNode($SW2);
 $g->addNode($SW25);
 $g->addNode($SW3);
+$g->addNode($DEA);
+$g->addNode($DWA);
+$g->addNode($DC);
+$g->addNode($DW);
 
 //create list of nodes
-$nodes = array("221"=>$R221, "225"=>$R225, "226"=>$R226, "264"=>$R264, "265"=>$R265, "303"=>$R303, "306"=>$R306);
+$nodes = array("221"=>$R221, "225"=>$R225, "226"=>$R226, "264"=>$R264, "265"=>$R265, "303"=>$R303, "306"=>$R306,
+"DEA"=>$DEA, "DWA"=>$DWA,
+"DC"=>$DC, "DW"=>$DW);
 ?>
 
 

@@ -8,14 +8,16 @@
  * Vertex Class used in conjunction with Graph class to implement Dijkstra's alogithm
  */
 
-
+/**
+ * Vertex class to act as nodes within a graph.
+ */
 class Vertex {
     public $name;                       ///< name of Vertex
     public $adjacencyList = array();    ///< list of edges
     public $distanceFromStart;          ///< integer distance from start used by runDijkstra
     public $previousVertex;             ///< previous vertex in shortest path
 
-    //! Constructor.
+    //! Vertex constructor.
     /*!
       Takes a name of vertex and sets distance to start to max
     */
@@ -62,6 +64,9 @@ class Vertex {
 
 }
 
+/**
+ * Graph class containing Vetexs to explore using Dijkstra.
+ */
 class Graph {
     public $list = array();     ///< list of vertexes in graph
     public $size;               ///< integer number of vertexes in graph
