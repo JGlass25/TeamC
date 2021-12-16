@@ -1,6 +1,9 @@
 <?php
+if(isset($_POST['Input_Course'])){
 
 $parse=$_POST['parse'];
+
+if(isset($parse)){
 
 	$a = explode("\n",$parse);
 	$b = explode("| ",$a[0]);
@@ -35,7 +38,6 @@ $parse=$_POST['parse'];
 		$day2=NULL;
 	    }
 
-	echo $coursename;
 	echo $coursename;	
 	echo $courseinfo;
 	echo $day1;
@@ -48,9 +50,8 @@ $parse=$_POST['parse'];
 	echo $room2;
 	echo $time2;
 	echo $location2;
-
- 
+    }
+}
 
 
  ?>
-
