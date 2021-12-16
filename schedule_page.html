@@ -1,6 +1,83 @@
-<!DOCTYPE html>
-<html>
-<form id="parse_course" name="parse_course" action="parse_course.php" method="POST">
-    <textarea name="Text1" cols="85" rows="25" id="parse"></textarea>
-    <input type="submit" name="Input Course"
-           class="button" value="Input Course" />
+//<!DOCTYPE html>
+//<html>
+//<form id="parse_course" name="parse_course" action="parse_course.php" method="POST">
+//    <textarea name="Text1" cols="85" rows="25" id="parse"></textarea>
+//    <input type="submit" name="Input Course"
+//           class="button" value="Input Course" />
+<style>
+table {
+  border-radius: 15px;
+  background: rgb(220, 20, 60);
+  padding: 20px;
+  width: 1110px;
+  height: 310px;
+  outline: 2px solid rgb(0,0,0)
+}
+th {
+  color:white;
+  border-radius: 15px;
+  background: rgb(0, 0, 0);
+  padding: 20px;
+  width: 90px;
+  height: 30px;
+  outline: 2px ridge rgb(220, 220, 220)
+}
+label {
+  color:black;
+  border-radius: 15px;
+  background: rgb(255,255,255);
+  padding: 12px;
+  width: 125px;
+  height: 50px;
+  outline: 2px solid rgb(220, 20, 60);
+}
+main {
+
+}
+body {
+  background-image: url('sjuback.jpg');
+background-repeat: no-repeat;
+  background-size: 2000px 1000px;
+}
+</style>
+	<h1 style="text-align:center;">Course Input Page</h1>
+	<table>
+	<tr>
+	<th> <div style="margin-left:.5em"> How to input courses:</div></th>
+	</tr>
+	<tr>
+	<td><div style="margin-left:.5em"> 1. Login to the nest</div>
+	<div style="margin-left:.5em"> 2. Click "Student+" under "Administrative Services"</div>
+	<div style="margin-left:.5em"> 3. Click "Student Profile"</div>
+	<div style="margin-left:.5em"> 4. Under "Curriculum and Courses" click "Student Services"</div>
+	<div style="margin-left:.5em"> 5.Select the term you wish to pull courses from</div>
+	<div style="margin-left:.5em"> 6. To the right of "Schedule", click "Schedule Details"</div>
+	<div style="margin-left:.5em"> 7. Highlight, copy and paste <b>ALL</b> text starting from the last number in CRN up to the down arrow next to the course name.(Use <a href="r.png">this image</a> as a reference)</div>
+	<div style="margin-left:.5em"> 8. Paste the text into the text box below.</div>
+	<div style="margin-left:.5em"> Repeat steps 7 and 8 for all courses to view your whole schedule.</div>
+	<div style="margin-left:.5em"> View the route of your classrooms <b><a href="r.png">here</a></b>.</div>
+	</td>
+	</tr>
+	</table>
+    <title>SJU Courses</title>
+	<p></p>
+    <label><b>Course Input</b></label>
+    <textarea rows="20" cols="70" class="form-control" id="parse" placeholder="-Paste your copied course information here-", name ="input_schedule">
+    </textarea>	
+  
+  
+  
+  
+  <button style="margin-right:30em" type="submit" name="submit" class="btn btn-primary">Submit</button>
+   </form>
+ 
+
+
+
+
+    </div>
+
+    
+  
+ 
+</html>
