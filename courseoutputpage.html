@@ -1,0 +1,199 @@
+<?php 
+
+include 'courseinputpage.html';
+
+?>
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background-image: url('sjuback.jpg');
+background-repeat: no-repeat;
+  background-size: 2000px 1000px;
+}
+h1 {
+margin-top: 50000em;
+text-align:center;
+}
+
+th {
+  color:white;
+  background: rgb(0, 0, 0);
+  padding: 20px;
+  width: 90px;
+  height: 30px;
+  outline: 2px solid rgb(220, 220, 220)
+}
+td {
+  color:black;
+  background: rgb(225, 225, 225);
+  padding: 20px;
+  width: 90px;
+  height: 30px;
+  outline: 2px solid rgb(220, 220, 220)
+}
+</style>
+<head>
+	<h1>Course Output Page</h1>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Course Output</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+	
+		<button class="btn btn-primary my-5"><a href="courseinputpage.html" class="text-light">Add Class</a></button>
+		<button class="btn btn-primary my-5"><a href="r.png" class="text-light">See Route</a></button>
+		<table class="table">
+  				<thead>
+    				<tr>
+      					<th scope="col">Course ID</th>
+      					<th scope="col">Subject</th>
+      					<th scope="col">Course Number</th>
+      					<th scope="col">Title</th>
+      					<th scope="col">Day(s)</th>
+      					<th scope="col">Start Time</th>
+      					<th scope="col">End Time</th>
+      					<th scope="col">Building</th>
+      					<th scope="col">Room Number</th>
+      					<th scope="col">Instructor</th>
+					<th scope="col">Lab</th>
+					<th scope="col">Day(s)</th>
+					<th scope="col">Room</th>
+					<th scope="col">Start Time</th>
+					<th scope="col">End Time</th>
+					<th scope="col">Building</th>
+      					<th scope="col">Operation</th>
+   					 </tr>
+  				</thead>
+  		
+    	<tr>
+
+            	   	<td scope="row">'.$course_id.'</td>
+            	   	<td>'.$subject.'</td>
+            	   	<td>'.$course_number.'</td>
+            	   	<td>'.$title.'</td>
+            	   	<td>'.$days.'</td>
+            	   	<td>'.$start_time.'</td>
+            	   	<td>'.$end_time.'</td>
+            	   	<td>'.$building.'</td>
+            	   	<td>'.$room_number.'</td>
+            	   	<td>'.$instructor.'</td>
+			<td>'.$title.'</td>
+            	   	<td>'.$days.'</td>
+            	   	<td>'.$start_time.'</td>
+            	   	<td>'.$end_time.'</td>
+            	   	<td>'.$building.'</td>
+            	   	<td>'.$instructor.'</td>
+            	   	<td>
+    				<button class="btn btn-primary"><a href="update.php? updateid='.$course_id.' " class="text-light">Update</a></button>
+    				<button class="btn btn-danger"><a href="delete.php? deleteid='.$course_id.'" class="text-light">Delete</a></button>
+    				</td>
+
+                   </tr> 
+<tr>
+
+            	   	<td scope="row">'.$course_id.'</td>
+            	   	<td>'.$subject.'</td>
+            	   	<td>'.$course_number.'</td>
+            	   	<td>'.$title.'</td>
+            	   	<td>'.$days.'</td>
+            	   	<td>'.$start_time.'</td>
+            	   	<td>'.$end_time.'</td>
+            	   	<td>'.$building.'</td>
+            	   	<td>'.$room_number.'</td>
+            	   	<td>'.$instructor.'</td>
+			<td>'.$title.'</td>
+            	   	<td>'.$days.'</td>
+            	   	<td>'.$start_time.'</td>
+            	   	<td>'.$end_time.'</td>
+            	   	<td>'.$building.'</td>
+            	   	<td>'.$instructor.'</td>
+            	   	<td>
+    				<button class="btn btn-primary"><a href="update.php? updateid='.$course_id.' " class="text-light">Update</a></button>
+    				<button class="btn btn-danger"><a href="delete.php? deleteid='.$course_id.'" class="text-light">Delete</a></button>
+    				</td>
+
+                   </tr> 
+<tr>
+
+            	   	<td scope="row">'.$course_id.'</td>
+            	   	<td>'.$subject.'</td>
+            	   	<td>'.$course_number.'</td>
+            	   	<td>'.$title.'</td>
+            	   	<td>'.$days.'</td>
+            	   	<td>'.$start_time.'</td>
+            	   	<td>'.$end_time.'</td>
+            	   	<td>'.$building.'</td>
+            	   	<td>'.$room_number.'</td>
+            	   	<td>'.$instructor.'</td>
+			<td>'.$title.'</td>
+            	   	<td>'.$days.'</td>
+            	   	<td>'.$start_time.'</td>
+            	   	<td>'.$end_time.'</td>
+            	   	<td>'.$building.'</td>
+            	   	<td>'.$instructor.'</td>
+            	   	<td>
+    				<button class="btn btn-primary"><a href="update.php? updateid='.$course_id.' " class="text-light">Update</a></button>
+    				<button class="btn btn-danger"><a href="delete.php? deleteid='.$course_id.'" class="text-light">Delete</a></button>
+    				</td>
+
+                   </tr> 
+<tr>
+
+            	   	<td scope="row">'.$course_id.'</td>
+            	   	<td>'.$subject.'</td>
+            	   	<td>'.$course_number.'</td>
+            	   	<td>'.$title.'</td>
+            	   	<td>'.$days.'</td>
+            	   	<td>'.$start_time.'</td>
+            	   	<td>'.$end_time.'</td>
+            	   	<td>'.$building.'</td>
+            	   	<td>'.$room_number.'</td>
+            	   	<td>'.$instructor.'</td>
+			<td>'.$title.'</td>
+            	   	<td>'.$days.'</td>
+            	   	<td>'.$start_time.'</td>
+            	   	<td>'.$end_time.'</td>
+            	   	<td>'.$building.'</td>
+            	   	<td>'.$instructor.'</td>
+            	   	<td>
+    				<button class="btn btn-primary"><a href="update.php? updateid='.$course_id.' " class="text-light">Update</a></button>
+    				<button class="btn btn-danger"><a href="delete.php? deleteid='.$course_id.'" class="text-light">Delete</a></button>
+    				</td>
+
+                   </tr> 
+<tr>
+
+            	   	<td scope="row">'.$course_id.'</td>
+            	   	<td>'.$subject.'</td>
+            	   	<td>'.$course_number.'</td>
+            	   	<td>'.$title.'</td>
+            	   	<td>'.$days.'</td>
+            	   	<td>'.$start_time.'</td>
+            	   	<td>'.$end_time.'</td>
+            	   	<td>'.$building.'</td>
+            	   	<td>'.$room_number.'</td>
+            	   	<td>'.$instructor.'</td>
+			<td>'.$title.'</td>
+            	   	<td>'.$days.'</td>
+            	   	<td>'.$start_time.'</td>
+            	   	<td>'.$end_time.'</td>
+            	   	<td>'.$building.'</td>
+            	   	<td>'.$instructor.'</td>
+            	   	<td>
+    				<button class="btn btn-primary"><a href="update.php? updateid='.$course_id.' " class="text-light">Update</a></button>
+    				<button class="btn btn-danger"><a href="delete.php? deleteid='.$course_id.'" class="text-light">Delete</a></button>
+    				</td>
+
+                   </tr> 
+
+    	 
+          
+
+</table>
+	
+
+</body>
+</html>
