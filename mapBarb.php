@@ -61,8 +61,8 @@
    }
    if (in_array("R306", $pathNames) && (in_array("SW3", $pathNames))) {
      echo '<div class = "Path306"> - </div>';
-     echo '<div class = "PathSW3">s<br>|</div>';
-     echo '<div class = "Path265">S</div>';
+     echo '<div class = "PathSW3">- - - - s<br></div>';
+     echo '<div class = "Path265">s - - - - - s</div>';
    }
    if (in_array ("SNE2", $pathNames) && (in_array("SNW2", $pathNames)) && (in_array("R303", $pathNames))) {
      echo '<div class = "PathSC2">s</div>';
@@ -213,8 +213,8 @@
  }
  .PathSW3 {
    position: absolute;
-   top: 330px;
-   left: 640px;
+   top: 360px;
+   left: 635px;
    font-size: 20px;
    color: rgb(75, 255, 36);
  }
@@ -235,9 +235,9 @@
  }
  .Path265 {
    position:absolute;
-   top: 455px;
+   top: 445px;
    left: 570px;
-   font-size: 10px;
+   font-size: 20px;
    color: rgb(75, 255, 36);
  }
 
