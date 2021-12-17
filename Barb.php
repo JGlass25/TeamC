@@ -235,55 +235,56 @@ if (isset($_POST['go'])) {
     }
 }
 
-// checks where the user selected to start and marks it w/ *
-switch ($_POST['start']) {
-  case "221":
-    echo '<div class = "StartR221">*</div>';
-    break;
-  case "225":
-    echo '<div class = "StartR225">*</div>';
-    break;
-  case "226":
-    echo '<div class = "StartR226">*</div>';
-    break;
- case "264":
-    echo '<div class = "StartR264">*</div>';
-    break;
-  case "265":
-    echo '<div class = "StartR265">*</div>';
-    break;
-  case "303":
-    echo '<div class = "StartR303">*</div>';
-    break;
-  case "306":
-    echo '<div class = "StartR306">*</div>';
-    break;
+if (!empty($_POST['start']) && !empty($_POST['end'])) {
+    // checks where the user selected to start and marks it w/ *
+    switch ($_POST['start']) {
+      case "221":
+        echo '<div class = "StartR221">*</div>';
+        break;
+      case "225":
+        echo '<div class = "StartR225">*</div>';
+        break;
+      case "226":
+        echo '<div class = "StartR226">*</div>';
+        break;
+     case "264":
+        echo '<div class = "StartR264">*</div>';
+        break;
+      case "265":
+        echo '<div class = "StartR265">*</div>';
+        break;
+      case "303":
+        echo '<div class = "StartR303">*</div>';
+        break;
+      case "306":
+        echo '<div class = "StartR306">*</div>';
+        break;
+    }
+    // checks were the user selected to end and marks it w/ *
+    switch ($_POST['end']) {
+      case "221":
+        echo '<div class = "StartR221">*</div>';
+        break;
+      case "225":
+        echo '<div class = "StartR225">*</div>';
+        break;
+      case "226":
+        echo '<div class = "StartR226">*</div>';
+        break;
+     case "264":
+        echo '<div class = "StartR264">*</div>';
+        break;
+      case "265":
+        echo '<div class = "StartR265">*</div>';
+        break;
+      case "303":
+        echo '<div class = "StartR303">*</div>';
+        break;
+      case "306":
+        echo '<div class = "StartR306">*</div>';
+        break;
+    }
 }
-// checks were the user selected to end and marks it w/ *
-switch ($_POST['end']) {
-  case "221":
-    echo '<div class = "StartR221">*</div>';
-    break;
-  case "225":
-    echo '<div class = "StartR225">*</div>';
-    break;
-  case "226":
-    echo '<div class = "StartR226">*</div>';
-    break;
- case "264":
-    echo '<div class = "StartR264">*</div>';
-    break;
-  case "265":
-    echo '<div class = "StartR265">*</div>';
-    break;
-  case "303":
-    echo '<div class = "StartR303">*</div>';
-    break;
-  case "306":
-    echo '<div class = "StartR306">*</div>';
-    break;
-}
-
 ?>
 <br> <br>
 </div>
