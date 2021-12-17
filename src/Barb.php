@@ -9,6 +9,7 @@
  */
 
 include_once "Vertex.php";
+include_once "mapBarb.php";
 
 //create vertexes
 //rooms
@@ -161,13 +162,17 @@ $g->addNode($DW);
 $nodes = array("221"=>$R221, "225"=>$R225, "226"=>$R226, "264"=>$R264, "265"=>$R265, "303"=>$R303, "306"=>$R306,
 "DEA"=>$DEA, "DWA"=>$DWA,
 "DC"=>$DC, "DW"=>$DW);
+createKey();
 ?>
 
 
 <html>
-<h2>Barbeline</h2>
-<img src="blankBarb.jpeg" alt="Graph" width="500">
-<br> <br>
+<div class = "title">Barbelin Hall</div>
+<div class = "background">
+<img id = "barbFloorPlan" src="https://github.com/JGlass25/TeamC/blob/main/BarbHall1_2_3.jpeg?raw=true" alt="Barbelin" height="500">
+<div class = "EDWA">DWA</div>
+<div class = "EDEA">DEA</div>
+<div class = "button_right"> Enter desired room below
 <form method="post">
     <label>Start: </label>
     <input type="text" name="start"/>
@@ -178,7 +183,10 @@ $nodes = array("221"=>$R221, "225"=>$R225, "226"=>$R226, "264"=>$R264, "265"=>$R
 	<input type="submit" name="go" value="Go!"/>
 </form>
 <br>
+</div>
+<br>
 <?php
+
 //error handling
 set_error_handler('exceptions_error_handler');
 
@@ -214,14 +222,69 @@ if (isset($_POST['go'])) {
             $pathNames[] = $x->name;
         }
 
+
         //print path
         echo 'Path from ' . $start->name . " to " . $end->name . "<br>";
         echo 'distance = ' . $end->distanceFromStart;
         echo '<pre>'; print_r($pathNames); echo '</pre>';
         //echo $g;
+
+        drawPath($pathNames);
     } else {
         echo "Missing Location";
     }
 }
+
+// checks where the user selected to start and marks it w/ *
+switch ($_POST['start']) {
+  case "221":
+    echo '<div class = "StartR221">*</div>';
+    break;
+  case "225":
+    echo '<div class = "StartR225">*</div>';
+    break;
+  case "226":
+    echo '<div class = "StartR226">*</div>';
+    break;
+ case "264":
+    echo '<div class = "StartR264">*</div>';
+    break;
+  case "265":
+    echo '<div class = "StartR265">*</div>';
+    break;
+  case "303":
+    echo '<div class = "StartR303">*</div>';
+    break;
+  case "306":
+    echo '<div class = "StartR306">*</div>';
+    break;
+}
+// checks were the user selected to end and marks it w/ *
+switch ($_POST['end']) {
+  case "221":
+    echo '<div class = "StartR221">*</div>';
+    break;
+  case "225":
+    echo '<div class = "StartR225">*</div>';
+    break;
+  case "226":
+    echo '<div class = "StartR226">*</div>';
+    break;
+ case "264":
+    echo '<div class = "StartR264">*</div>';
+    break;
+  case "265":
+    echo '<div class = "StartR265">*</div>';
+    break;
+  case "303":
+    echo '<div class = "StartR303">*</div>';
+    break;
+  case "306":
+    echo '<div class = "StartR306">*</div>';
+    break;
+}
+
 ?>
+<br> <br>
+</div>
 </html>
