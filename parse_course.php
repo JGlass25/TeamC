@@ -49,6 +49,7 @@ if(isset($parse)){
 	echo $location1;
 	echo $prof;
 	echo $crn;
+	echo $lab;
 	echo $day2;
 	echo $room2;
 	echo $time2;
