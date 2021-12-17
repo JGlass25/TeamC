@@ -36,7 +36,10 @@ if(isset($parse)){
 	
 	if ($room2==NULL){
 		$day2=NULL;
-	    }
+		$lab="N";
+	}else{
+		$lab = "Y";
+	}
 
 	echo $coursename;	
 	echo $courseinfo;
