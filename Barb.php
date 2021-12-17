@@ -224,9 +224,10 @@ if (isset($_POST['go'])) {
 
 
         //print path
-        echo 'Path from ' . $start->name . " to " . $end->name . "<br>";
-        echo 'distance = ' . $end->distanceFromStart;
-        echo '<pre>'; print_r($pathNames); echo '</pre>';
+        echo '<br>';
+        echo '<span style="color:white">Path from ' . $start->name . " to " . $end->name . '<br></span>';
+        echo '<span style="color:white">Time = ' . $end->distanceFromStart * 2 . ' seconds<br></span>';
+        //echo '<pre>'; print_r($pathNames); echo '</pre>';
         //echo $g;
 
         drawPath($pathNames);
