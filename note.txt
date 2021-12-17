@@ -1,0 +1,10 @@
+If you take a look in "Barb.php" you'll see I have 30 edges between
+the classrooms and stair cases, many of them are duplicates and are 
+marked with a * (for stairs I think we should use an arrow for going 
+up or down so those are not duplicates, I count 21 total edges. 
+Could we potentially create map images for each unique 
+edge and then overlay them dynamically to create each path rather
+than creating the whole path in one? Otherwise the actual path finding 
+will only be useful for determining the total distance and not the actual
+path. If that seems too hard I'll help you set up the program so you can 
+run it and find the path best while you're making the images.
