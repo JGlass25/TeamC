@@ -35,13 +35,13 @@ if(isset($parse)){
 	$location2 = $k[1];
 	
 	if ($room2==NULL){
-		$day2='N';
-		$lab="N";
-        $room2 = "N";
-		$time2 = "N";
-		$location2 = "N";
+		$day2='N/A';
+		$lab="N/A";
+                $room2 = "N/A";
+		$time2 = "N/A";
+		$location2 = "N/A";
 	}else{
-		$lab = "Y";
+		$lab = "Yes";
 	}
 
 	echo $coursename;	
