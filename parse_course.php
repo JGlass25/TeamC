@@ -35,8 +35,11 @@ if(isset($parse)){
 	$location2 = $k[1];
 	
 	if ($room2==NULL){
-		$day2=NULL;
+		$day2='N';
 		$lab="N";
+        $room2 = "N";
+		$time2 = "N";
+		$location2 = "N";
 	}else{
 		$lab = "Y";
 	}
@@ -49,12 +52,12 @@ if(isset($parse)){
 	echo $location1;
 	echo $prof;
 	echo $crn;
+        echo $date;
 	echo $lab;
 	echo $day2;
 	echo $room2;
 	echo $time2;
 	echo $location2;
-    }
 }
 
 
