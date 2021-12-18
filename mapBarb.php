@@ -73,7 +73,7 @@
    if (in_array ("R306", $pathNames)){
      echo '<div class = "Path306"> - </div>';
    }
-  if (in_array("SNW2", $pathNames) && in_array("R303", $pathNames)) {
+   if (in_array("SNW2", $pathNames) && in_array("R303", $pathNames)) {
      echo '<div class = "PathPHLHall"></div>';
      echo '<div class = "PathSC3">s</div>';
      echo '<div class = "PathTo303FRSC3"> - -</div>';
@@ -90,12 +90,16 @@
  ?>
  <html>
  <meta name="viewport" content="width=device-width, initial-scale=1">
+
  <style>
  .background {
-   /* Johnathan you can completely delete this if needed */
-   background: #c31432;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to bottom, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to bottom, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   /* Johnathan you can completely delete this if needed
+   background: #c31432;  /* fallback for old browsers
+   background: -webkit-linear-gradient(to bottom, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6
+   background: linear-gradient(to bottom, #240b36, #c31432);*/ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background-image: url('https://www.sju.edu/sites/default/files/CampusMasterPlan_3200x1600_HomepageHero.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
  }
  .title {
    text-align: center;
@@ -122,9 +126,7 @@
    background-color: white;
    border-style: ridge;
    border-color: black;
-
   }
- }
  .container {
    position: absolute;
    color: rgb(75, 255, 36);
@@ -132,7 +134,6 @@
    top: 480px;
    left: 340px;
  }
-
  .EDWA {
    position: absolute;
    top: 235px;
@@ -174,7 +175,6 @@
   left: 540px;
   font-size: 40px;
   color: rgb(75, 255, 36);
-
  }
  .PathPassSC2 {
    position: absolute;
@@ -225,7 +225,6 @@
    font-size: 20px;
    color: rgb(75, 255, 36);
  }
-
  .Path264 {
    position: absolute;
    top: 440px;
@@ -247,7 +246,6 @@
    font-size: 20px;
    color: rgb(75, 255, 36);
  }
-
  .StartR265 {
   position: absolute;
   top: 415px;
@@ -353,7 +351,14 @@
    top: 485px;
    left: 477px;
  }
+ .boxed {
+  align-content:left;
+  position:absolute;
+  padding: 20px;
+  background-color: white;
+  border-style: ridge;
+  border-color: black;
 
-
+}
  </style>
  </html>
