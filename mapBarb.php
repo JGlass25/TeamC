@@ -73,6 +73,13 @@
    if (in_array ("R306", $pathNames)){
      echo '<div class = "Path306"> - </div>';
    }
+  if (in_array("SNW2", $pathNames) && in_array("R303", $pathNames)) {
+     echo '<div class = "PathPHLHall"></div>';
+     echo '<div class = "PathSC3">s</div>';
+     echo '<div class = "PathTo303FRSC3"> - -</div>';
+     echo '<div class = "PathToSC2">--</div>';
+     echo '<div class = "PathSC2">s</div>';
+   }
 
 
  }
