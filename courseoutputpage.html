@@ -48,21 +48,19 @@ td {
 		<table class="table">
   				<thead>
     				<tr>
-      					<th scope="col">Course ID</th>
-      					<th scope="col">Subject</th>
-      					<th scope="col">Course Number</th>
-      					<th scope="col">Title</th>
+      					<th scope="col">Course Name</th>
+      					<th scope="col">Course Info</th>
       					<th scope="col">Day(s)</th>
-      					<th scope="col">Start Time</th>
-      					<th scope="col">End Time</th>
-      					<th scope="col">Building</th>
-      					<th scope="col">Room Number</th>
+					<th scope="col">Room Number</th>
+      					<th scope="col">Time</th>
+					<th scope="col">Building</th>
       					<th scope="col">Instructor</th>
+					<th scope="col">CRN</th>
+					<th scope="col">Start/End Date</th>	
 					<th scope="col">Lab</th>
 					<th scope="col">Day(s)</th>
 					<th scope="col">Room</th>
-					<th scope="col">Start Time</th>
-					<th scope="col">End Time</th>
+					<th scope="col">Time</th>
 					<th scope="col">Building</th>
       					<th scope="col">Operation</th>
    					 </tr>
@@ -70,22 +68,20 @@ td {
   		
     	<tr>
 
-            	   	<td scope="row">'.$course_id.'</td>
-            	   	<td>'.$subject.'</td>
-            	   	<td>'.$course_number.'</td>
-            	   	<td>'.$title.'</td>
-            	   	<td>'.$days.'</td>
-            	   	<td>'.$start_time.'</td>
-            	   	<td>'.$end_time.'</td>
-            	   	<td>'.$building.'</td>
-            	   	<td>'.$room_number.'</td>
-            	   	<td>'.$instructor.'</td>
-			<td>'.$title.'</td>
-            	   	<td>'.$days.'</td>
-            	   	<td>'.$start_time.'</td>
-            	   	<td>'.$end_time.'</td>
-            	   	<td>'.$building.'</td>
-            	   	<td>'.$instructor.'</td>
+            	   	<td scope="row">Beginning Spanish I</td>
+            	   	<td>Spanish 101 Section D03</td>
+            	   	<td>Monday,Wednesday,Friday</td>
+            	   	<td>322</td>
+            	   	<td>12:20 PM - 01:10 PM</td>
+            	   	<td>Post Hall</td>
+            	   	<td>Contreras, Jose</td>
+            	   	<td>41247</td>
+			<td>08/27/2018 -- 12/18/2018</td>
+            	   	<td>Yes</td>
+            	   	<td>Friday</td>
+			<td>315</td>
+            	   	<td>11:15 AM - 12:05 PM</td>
+            	   	<td>Bellarmine Hall</td>
             	   	<td>
     				<button class="btn btn-primary"><a href="update.php? updateid='.$course_id.' " class="text-light">Update</a></button>
     				<button class="btn btn-danger"><a href="delete.php? deleteid='.$course_id.'" class="text-light">Delete</a></button>
@@ -94,22 +90,20 @@ td {
                    </tr> 
 <tr>
 
-            	   	<td scope="row">'.$course_id.'</td>
-            	   	<td>'.$subject.'</td>
-            	   	<td>'.$course_number.'</td>
-            	   	<td>'.$title.'</td>
-            	   	<td>'.$days.'</td>
-            	   	<td>'.$start_time.'</td>
-            	   	<td>'.$end_time.'</td>
-            	   	<td>'.$building.'</td>
-            	   	<td>'.$room_number.'</td>
-            	   	<td>'.$instructor.'</td>
-			<td>'.$title.'</td>
-            	   	<td>'.$days.'</td>
-            	   	<td>'.$start_time.'</td>
-            	   	<td>'.$end_time.'</td>
-            	   	<td>'.$building.'</td>
-            	   	<td>'.$instructor.'</td>
+            	   	<td scope="row">Calculus I</td>
+            	   	<td>Mathematics 161 Section D03</td>
+            	   	<td>Monday,Wednesday,Friday</td>
+            	   	<td>003</td>
+            	   	<td>10:10 AM - 11:00 AM</td>
+            	   	<td>McShain Residence Center</td>
+            	   	<td>Hall, Rachel</td>
+            	   	<td>40909</td>
+			<td>08/27/2018 -- 12/18/2018</td>
+			<td>Yes</td>
+            	   	<td>Wednesday</td>
+            	   	<td>003</td>
+			<td>09:05 AM - 09:55 AM</td>
+            	   	<td>McShain Residence Center</td>
             	   	<td>
     				<button class="btn btn-primary"><a href="update.php? updateid='.$course_id.' " class="text-light">Update</a></button>
     				<button class="btn btn-danger"><a href="delete.php? deleteid='.$course_id.'" class="text-light">Delete</a></button>
@@ -118,22 +112,20 @@ td {
                    </tr> 
 <tr>
 
-            	   	<td scope="row">'.$course_id.'</td>
-            	   	<td>'.$subject.'</td>
-            	   	<td>'.$course_number.'</td>
-            	   	<td>'.$title.'</td>
-            	   	<td>'.$days.'</td>
-            	   	<td>'.$start_time.'</td>
-            	   	<td>'.$end_time.'</td>
-            	   	<td>'.$building.'</td>
-            	   	<td>'.$room_number.'</td>
-            	   	<td>'.$instructor.'</td>
-			<td>'.$title.'</td>
-            	   	<td>'.$days.'</td>
-            	   	<td>'.$start_time.'</td>
-            	   	<td>'.$end_time.'</td>
-            	   	<td>'.$building.'</td>
-            	   	<td>'.$instructor.'</td>
+            	   	<td scope="row">Concepts of Financial Acct.</td>
+            	   	<td>Accounting 101 Section D05</td>
+            	   	<td>Monday,Wednesday,Friday </td>
+            	   	<td>101</td>
+            	   	<td>01:25 PM - 02:15 PM</td>
+            	   	<td>Bellarmine Hall</td>
+            	   	<td>Teti, Bob</td>
+            	   	<td>40021</td>
+			<td>08/27/2018 -- 12/18/2018</td>
+            	   	<td>N/A</td>
+            	   	<td>N/A</td>
+			<td>N/A</td>
+            	   	<td>N/A</td>
+            	   	<td>N/A</td>
             	   	<td>
     				<button class="btn btn-primary"><a href="update.php? updateid='.$course_id.' " class="text-light">Update</a></button>
     				<button class="btn btn-danger"><a href="delete.php? deleteid='.$course_id.'" class="text-light">Delete</a></button>
@@ -142,22 +134,20 @@ td {
                    </tr> 
 <tr>
 
-            	   	<td scope="row">'.$course_id.'</td>
-            	   	<td>'.$subject.'</td>
-            	   	<td>'.$course_number.'</td>
-            	   	<td>'.$title.'</td>
-            	   	<td>'.$days.'</td>
-            	   	<td>'.$start_time.'</td>
-            	   	<td>'.$end_time.'</td>
-            	   	<td>'.$building.'</td>
-            	   	<td>'.$room_number.'</td>
-            	   	<td>'.$instructor.'</td>
-			<td>'.$title.'</td>
-            	   	<td>'.$days.'</td>
-            	   	<td>'.$start_time.'</td>
-            	   	<td>'.$end_time.'</td>
-            	   	<td>'.$building.'</td>
-            	   	<td>'.$instructor.'</td>
+            	   	<td scope="row">Computer Science I</td>
+            	   	<td>Computer Science 120 Section D03</td>
+            	   	<td>Tuesday,Thursday</td>
+            	   	<td>225</td>
+            	   	<td>09:30 AM - 10:45 AM</td>
+            	   	<td>Barbelin/Lonergan Hall</td>
+            	   	<td>Krueger, Mary</td>
+            	   	<td>40317</td>
+			<td>08/27/2018 -- 12/18/2018</td>
+            	   	<td>Yes</td>
+            	   	<td>Monday</td>
+			<td>225</td>
+            	   	<td>11:15 AM - 12:05 PM</td>
+            	   	<td>Barbelin/Lonergan Hall</td>
             	   	<td>
     				<button class="btn btn-primary"><a href="update.php? updateid='.$course_id.' " class="text-light">Update</a></button>
     				<button class="btn btn-danger"><a href="delete.php? deleteid='.$course_id.'" class="text-light">Delete</a></button>
@@ -166,22 +156,20 @@ td {
                    </tr> 
 <tr>
 
-            	   	<td scope="row">'.$course_id.'</td>
-            	   	<td>'.$subject.'</td>
-            	   	<td>'.$course_number.'</td>
-            	   	<td>'.$title.'</td>
-            	   	<td>'.$days.'</td>
-            	   	<td>'.$start_time.'</td>
-            	   	<td>'.$end_time.'</td>
-            	   	<td>'.$building.'</td>
-            	   	<td>'.$room_number.'</td>
-            	   	<td>'.$instructor.'</td>
-			<td>'.$title.'</td>
-            	   	<td>'.$days.'</td>
-            	   	<td>'.$start_time.'</td>
-            	   	<td>'.$end_time.'</td>
-            	   	<td>'.$building.'</td>
-            	   	<td>'.$instructor.'</td>
+            	   	<td scope="row">Craft of Language</td>
+            	   	<td>English 101 Section D21</td>
+            	   	<td>Tuesday,Thursday</td>
+            	   	<td>312</td>
+            	   	<td>12:30 PM - 01:45 PM</td>
+            	   	<td>Merion Hall</td>
+            	   	<td>Ready, Cecilia</td>
+            	   	<td>40594</td>
+			<td>08/27/2018 -- 12/18/2018</td>
+            	   	<td>N/A</td>
+            	   	<td>N/A</td>
+			<td>N/A</td>
+            	   	<td>N/A</td>
+            	   	<td>N/A</td>
             	   	<td>
     				<button class="btn btn-primary"><a href="update.php? updateid='.$course_id.' " class="text-light">Update</a></button>
     				<button class="btn btn-danger"><a href="delete.php? deleteid='.$course_id.'" class="text-light">Delete</a></button>
